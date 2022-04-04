@@ -1,6 +1,4 @@
-import Oppgave2
-
-
+# This finds all the primes of any given number
 def findPrimes(N):
     outputText = []
     x = 2
@@ -19,27 +17,25 @@ def decrypt(D, C, N):
     return C ** D % N
 
 
+def obligPrint():
+    print("Our p is:", p, ", and our q is:", q)
+    print("Our ϕ(n) is:", phi)
+    print("We find the d with taking the inverse of e, which is:", d)
+    print("Now using 'd' we decrypt 'y' ('c' in my code) and we get:", decrypt(d, c, n))
+
+
 if __name__ == '__main__':
     n = 15151
-
     e = 17
-
     c = 832
 
+    # Using prime factorisation to find our p and q
     primeList = findPrimes(n)
-
     p = primeList[0]
     q = primeList[1]
 
-    phi = (p-1)*(q-1)
+    phi = (p - 1) * (q - 1)
+    # Not using my own power function here because it doesn't support inverse modulation
+    d = pow(e, -1, phi)
 
-    d = 0
-
-    for i in range(2, n):
-        if (i * e) % phi == 1:
-            d = i
-            break
-    print(d)
-    print(phi)
-
-    print(decrypt(d, c, n))
+    obligPrint()
