@@ -1,3 +1,6 @@
+import Oppgave1 as op1
+import random
+
 def setup():
     prime = int("""172471720944269739125606601541029487739340755626635
 7725839713037594384191757726636695937218465501974427444
@@ -8,38 +11,38 @@ def setup():
 
     generator = 3
     dec = 333
-    germanS = pow(generator, dec, prime)
+    germanS = op1.powerCal(generator, dec, prime)
     return prime, generator, germanS, dec
 
 
 def signature():
     K = ephemeralKeyFinder(p)
-    local_r = pow(g, K, p)
+    local_r = op1.powerCal(g, K, p)
     message = int('A3FB8FCE', 16) % p
+    # Not using my own power function here because it doesn't support inverse modulation
     local_s = ((message - (d * local_r)) * pow(K, -1, p - 1)) % (p - 1)
     return message, local_r, local_s
 
 
 def verify():
-    t = (pow(beta, r, p) * pow(r, s, p)) % p
-    test = pow(g, m, p)
+    t = op1.powerCal(beta, r, p) * op1.powerCal(r, s, p) % p
+    test = op1.powerCal(g, m, p)
     if t == test:
         return True
     return False
 
 
 def ephemeralKeyFinder(U):
-    for i in range(1, U - 1):
-        result = computeGCD(i, U - 1)
-        if result == 1:
-            return i
-    return -1
+    result = 0
+    while result != 1:
+        random_integer = random.randint(1, U-2)
+        result = computeGCD(random_integer, U-1)
+    return random_integer
 
 
 def computeGCD(X, Y):
     while Y:
         X, Y = Y, X % Y
-
     return X
 
 

@@ -32,9 +32,7 @@ def function(x, poly):
 
 
 def generateTT(poly):
-    dict = {
-
-    }
+    dict = {}
     myList = list(product([0, 1], repeat=len(poly)))
     for j in range(len(myList)):
         myList[j] = list(myList[j])
@@ -51,9 +49,8 @@ def printDictionary(d):
 
 
 if __name__ == '__main__':
-
     # Test poly
-    poly3 = [1, 1 ,0]
+    poly3 = [1, 1, 0]
 
     # Here are the polynomials that I'm using. They were found using magma (See screenshot in image folder)
     poly4 = [1, 1, 0, 0]
