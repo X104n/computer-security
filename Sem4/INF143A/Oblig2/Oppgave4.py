@@ -31,7 +31,7 @@ def verify():
 
 
 def ephemeralKeyFinder(U):
-    for i in range(U//2, U-1):
+    for i in range(1, U-1):
         result = computeGCD(i, U-1)
         if result == 1:
             return i

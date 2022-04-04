@@ -36,7 +36,7 @@ def generateTT(poly):
     dict = {
 
     }
-    myList = list(product([0, 1], repeat = 4))
+    myList = list(product([0, 1], repeat = len(poly)))
     for j in range(len(myList)):
         myList[j] = list(myList[j])
 
@@ -47,11 +47,10 @@ def generateTT(poly):
     return dict
 
 
-
 if __name__ == '__main__':
-    poly4 = [0, 0, 1, 1]
-    poly5 = []
+    poly4 = [1, 1, 0, 0]
+    poly5 = [1,0,1,0,0]
     poly6 = []
     print(generateTT(poly4))
-    #print(generateTT(poly5))
-    #print(generateTT(poly6))
+    print(generateTT(poly5))
+    print(generateTT(poly6))
