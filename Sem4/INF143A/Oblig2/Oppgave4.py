@@ -1,4 +1,4 @@
-import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
+import random as Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 import Oppgave1 as op1
 import random
 
@@ -81,3 +81,4 @@ if __name__ == '__main__':
 
     # Printing information about the variables
     obligPrint()
+

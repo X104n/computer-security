@@ -1,4 +1,4 @@
-import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
+import random as Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 from itertools import product
 
 
@@ -69,3 +69,4 @@ if __name__ == '__main__':
 
     print("\nTruth table for n = 6")
     printDictionary(generateTT(poly6))
+

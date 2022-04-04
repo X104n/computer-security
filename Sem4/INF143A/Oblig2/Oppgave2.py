@@ -1,4 +1,4 @@
-import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
+import random as Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 import random
 import Oppgave1 as op1
 
@@ -50,3 +50,4 @@ if __name__ == '__main__':
     print("A prime of 500 bits:", findPrime(500))
     print("A prime of 671 bits:", findPrime(671))
     print("A prime of 1024 bits:", findPrime(1024))
+

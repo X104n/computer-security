@@ -1,4 +1,4 @@
-import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
+import random as Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 # This finds all the primes of any given number
 def findPrimes(N):
     outputText = []
@@ -40,3 +40,4 @@ if __name__ == '__main__':
     d = pow(e, -1, phi)
 
     obligPrint()
+
