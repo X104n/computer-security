@@ -1,6 +1,7 @@
 import Oppgave1 as op1
 import random
 
+
 def setup():
     prime = int("""172471720944269739125606601541029487739340755626635
 7725839713037594384191757726636695937218465501974427444
@@ -35,8 +36,8 @@ def verify():
 def ephemeralKeyFinder(U):
     result = 0
     while result != 1:
-        random_integer = random.randint(1, U-2)
-        result = computeGCD(random_integer, U-1)
+        random_integer = random.randint(1, U - 2)
+        result = computeGCD(random_integer, U - 1)
     return random_integer
 
 

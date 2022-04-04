@@ -23,10 +23,11 @@ def generate(n):
 def testIfPrime(p):
     # Should lower this here to test the code
     for j in range(1000000):
-        r = random.randint(2, p-1)
+        r = random.randint(2, p - 1)
         if not isPrime(r, p):
             return False
     return True
+
 
 def findPrime(d):
     # Finding the lower and higher bound of all the integers with d bits
@@ -40,10 +41,11 @@ def findPrime(d):
             return prime
         prime += 1
     return None
+
+
 if __name__ == '__main__':
     # Go to testIfPrime function and lower the for loop to 100 or 1000 to test the code. Kept it high to show that it
     # needs to run a couple of times to make sure it is a prime number
     print("A prime of 500 bits:", findPrime(500))
     print("A prime of 671 bits:", findPrime(671))
     print("A prime of 1024 bits:", findPrime(1024))
-

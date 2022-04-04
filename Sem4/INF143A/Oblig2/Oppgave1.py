@@ -1,4 +1,3 @@
-
 def isEven(n):
     if n % 2 == 0:
         return True
@@ -30,5 +29,5 @@ if __name__ == '__main__':
     power = 12345678987654321
     print("The base is: ", base)
     print("The power is:", power)
+    # Here we mod with 100 to only get the two last digits
     print("The last two integers of this exponent is:", powerCal(base, power, 100))
-
