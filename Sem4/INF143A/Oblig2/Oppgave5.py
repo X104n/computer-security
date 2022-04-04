@@ -40,17 +40,34 @@ def generateTT(poly):
         myList[j] = list(myList[j])
 
     for i in range(len(myList)):
-        print(i)
         dict[str(myList[i])] = function(myList[i], poly)
 
     return dict
 
 
+def printDictionary(d):
+    for key, value in d.items():
+        print(key, " | ", value)
+
+
 if __name__ == '__main__':
+
+    # Test poly
+    poly3 = [1, 1 ,0]
+
+    # Here are the polynomials that I'm using. They were found using magma (See screenshot in image folder)
     poly4 = [1, 1, 0, 0]
     poly5 = [1, 0, 1, 0, 0]
     poly6 = [1, 1, 0, 1, 1, 0]
-    print(generateTT(poly4))
-    print(generateTT(poly5))
-    print(generateTT(poly6))
 
+    print("\nTest truth table for n = 3")
+    printDictionary(generateTT(poly3))
+
+    print("\nTruth table for n = 4")
+    printDictionary(generateTT(poly4))
+
+    print("\nTruth table for n = 5")
+    printDictionary(generateTT(poly5))
+
+    print("\nTruth table for n = 6")
+    printDictionary(generateTT(poly6))
