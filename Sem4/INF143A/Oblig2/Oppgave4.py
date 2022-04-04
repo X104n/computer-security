@@ -1,4 +1,3 @@
-
 def setup():
     prime = int("""172471720944269739125606601541029487739340755626635
 7725839713037594384191757726636695937218465501974427444
@@ -25,14 +24,13 @@ def verify():
     t = (pow(beta, r, p) * pow(r, s, p)) % p
     test = pow(g, m, p)
     if t == test:
-        print("\nSignature verified")
-    else:
-        print("\nSignature is not verified")
+        return True
+    return False
 
 
 def ephemeralKeyFinder(U):
-    for i in range(1, U-1):
-        result = computeGCD(i, U-1)
+    for i in range(1, U - 1):
+        result = computeGCD(i, U - 1)
         if result == 1:
             return i
     return -1
@@ -45,19 +43,35 @@ def computeGCD(X, Y):
     return X
 
 
-if __name__ == '__main__':
-    p, g, beta, d = setup()
-
+def obligPrint():
     print("\nThe public key is (prime, generator, beta): ")
     print("Prime:", p)
     print("Generator:", g)
     print("beta:", beta)
-
-    m, r, s = signature()
 
     print("\nThe message can be represented as an integer mod p. This message is:", m)
     print("The signature (Message, (r, s):")
     print("r:", r)
     print("s:", s)
 
-    verify()
+    if (verified):
+        print("The signature was verified")
+    else:
+        print("The signature was not verified")
+
+
+if __name__ == '__main__':
+    # We first have the setup phase where we define a large prime (p), pic a generator (g), choose d and compute β.
+    # This gives us the public key
+    p, g, beta, d = setup()
+
+    # Then we have the signature phase. Here we pick an ephemeral key that we only use during the signing. Then we
+    # compute r and s. And together we have the signed message (m, (r, s)).
+    m, r, s = signature()
+
+    # And to verify we can use the following equation to check if they are equal.
+    # t = β^r * r^s (mod p) & t = g^x (mod p)
+    verified = verify()
+
+    # Printing information about the variables
+    obligPrint()

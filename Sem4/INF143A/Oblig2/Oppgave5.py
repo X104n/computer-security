@@ -1,8 +1,7 @@
 from itertools import product
 
-import sys
 
-def xor(v1,v2):
+def xor(v1, v2):
     result = []
     for i in range(len(v1)):
         b = (v1[i] + v2[i]) % 2
@@ -36,7 +35,7 @@ def generateTT(poly):
     dict = {
 
     }
-    myList = list(product([0, 1], repeat = len(poly)))
+    myList = list(product([0, 1], repeat=len(poly)))
     for j in range(len(myList)):
         myList[j] = list(myList[j])
 
@@ -49,8 +48,9 @@ def generateTT(poly):
 
 if __name__ == '__main__':
     poly4 = [1, 1, 0, 0]
-    poly5 = [1,0,1,0,0]
-    poly6 = []
+    poly5 = [1, 0, 1, 0, 0]
+    poly6 = [1, 1, 0, 1, 1, 0]
     print(generateTT(poly4))
     print(generateTT(poly5))
     print(generateTT(poly6))
+
