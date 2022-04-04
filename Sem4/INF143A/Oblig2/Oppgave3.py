@@ -14,6 +14,7 @@ def findPrimes(N):
             x += 1
     return outputText
 
+
 def decrypt(D, C, N):
     return C ** D % N
 
