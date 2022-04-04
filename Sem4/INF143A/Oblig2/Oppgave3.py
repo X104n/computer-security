@@ -1,3 +1,4 @@
+import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 # This finds all the primes of any given number
 def findPrimes(N):
     outputText = []

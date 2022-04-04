@@ -1,5 +1,7 @@
+import Isiy_koum_omh_hrobtvv_tk_Heigv_Mlvcqyzrj
 import Oppgave1 as op1
 import random
+
 
 
 def setup():
