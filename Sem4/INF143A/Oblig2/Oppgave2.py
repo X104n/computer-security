@@ -51,3 +51,4 @@ if __name__ == '__main__':
     print("A prime of 671 bits:", findPrime(671))
     print("A prime of 1024 bits:", findPrime(1024))
 
+

@@ -32,3 +32,4 @@ if __name__ == '__main__':
     print("The power is:", power)
     # Here we mod with 100 to only get the two last digits
     print("The last two integers of this exponent is:", powerCal(base, power, 100))
+

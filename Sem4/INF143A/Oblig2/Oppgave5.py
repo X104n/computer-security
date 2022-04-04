@@ -70,3 +70,4 @@ if __name__ == '__main__':
     print("\nTruth table for n = 6")
     printDictionary(generateTT(poly6))
 
+

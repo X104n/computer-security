@@ -82,3 +82,4 @@ if __name__ == '__main__':
     # Printing information about the variables
     obligPrint()
 
+
