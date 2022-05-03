@@ -68,12 +68,22 @@ def ofb(p, k, iv):
 if __name__ == '__main__':
     k = [0, 1] * 16
     iv = [1] * 32
+    print("Using IV of all 1s for CBC and OFB")
 
     p = f2b.readMain("gold_plaintext.in")
-    f2b.writeMain("output/ecbEncryption.txt", ecb(p, k))
+    ecb = ecb(p, k)
+    print("ECB output in bits:", ecb)
+    print("See ecbEncryption.txt for the encrypted file in the output folder")
+    f2b.writeMain("output/ecbEncryption.txt", ecb)
 
     p = f2b.readMain("gold_plaintext.in")
-    f2b.writeMain("output/cbcEncryption.txt", cbc(p, k, iv))
+    cbc = cbc(p, k, iv)
+    print("CBC output in bits:", cbc)
+    print("See cbcEncryption.txt for the encrypted file in the output folder")
+    f2b.writeMain("output/cbcEncryption.txt", cbc)
 
     p = f2b.readMain("gold_plaintext.in")
-    f2b.writeMain("output/ofbEncryption.txt", ofb(p, k, iv))
+    ofb = ofb(p, k, iv)
+    print("OFB output in bits:", ofb)
+    print("See ofbEncryption.txt for the encrypted file in the output folder")
+    f2b.writeMain("output/ofbEncryption.txt", ofb)

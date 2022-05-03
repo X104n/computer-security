@@ -40,3 +40,6 @@ if __name__ == "__main__":
     k = [0, 1] * 128
     blocks = enrycpting(p, k, iv)
     f2b.writeMain("output/sha256.txt", blocks)
+    print("The key is 256 bits long")
+    print("The encrypted file can you find in the output folder as 'hash.txt'")
+    print("But, just to be safe the bit representation of the file is:", blocks)
