@@ -1,24 +1,18 @@
 import f2b
 import gold as enc
 
-testK = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-#k = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
-k = [1] * 32
-iv = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-poly = []
 
-
-def plain_to_block(plaintext):
+def plain_to_block(plaintext, blockSize):
     blocks = []
-    while len(plaintext) >= 32:
+    while len(plaintext) >= blockSize:
         block = []
-        for i in range(32):
+        for i in range(blockSize):
             block.append(plaintext[0])
             plaintext.pop(0)
         blocks.append(block)
 
     if len(plaintext) != 0:
-        for i in range(32 - len(plaintext)):
+        for i in range(blockSize - len(plaintext)):
             plaintext.append(0)
         blocks.append(plaintext)
 
@@ -26,7 +20,7 @@ def plain_to_block(plaintext):
 
 
 def ecb(p, k):
-    plainBlock = plain_to_block(p)
+    plainBlock = plain_to_block(p, 32)
     cryptBlock = []
 
     for i in range(len(plainBlock)):
@@ -36,7 +30,7 @@ def ecb(p, k):
 
 
 def cbc(p, k, iv):
-    plainBlock = plain_to_block(p)
+    plainBlock = plain_to_block(p, 32)
     cryptBlock = []
     result = []
 
@@ -55,7 +49,7 @@ def cbc(p, k, iv):
     return result
 
 def ofb(p, k, iv):
-    plainBlock = plain_to_block(p)
+    plainBlock = plain_to_block(p, 32)
     stream = []
     result = []
 
@@ -71,8 +65,15 @@ def ofb(p, k, iv):
     return result
 
 
-p = f2b.readMain("gold_plaintext.in")
+if __name__ == '__main__':
+    k = [0, 1] * 16
+    iv = [1] * 32
 
-f2b.writeMain("cbcEncryption.txt", cbc(p, k, iv))
+    p = f2b.readMain("gold_plaintext.in")
+    f2b.writeMain("output/ecbEncryption.txt", ecb(p, k))
 
-#print(cbc(p, k, iv))
+    p = f2b.readMain("gold_plaintext.in")
+    f2b.writeMain("output/cbcEncryption.txt", cbc(p, k, iv))
+
+    p = f2b.readMain("gold_plaintext.in")
+    f2b.writeMain("output/ofbEncryption.txt", ofb(p, k, iv))
