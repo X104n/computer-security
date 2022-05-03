@@ -37,15 +37,17 @@ def multiplication(A, B, irr):
     return result
 
 
-def gold(P):
-    return multiplication(P, multiplication(P, P, irr), irr)
+def gold(K):
+    return multiplication(K, multiplication(K, K, irr), irr)
 
 
 def encrypt(P, K):
     assert len(P) == 32
     assert len(K) == 32
-    return xor(gold(P), K)
+    return xor(gold(K), P)
 
 
+'''
 print(encrypt([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
               [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]))
+'''

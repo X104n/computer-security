@@ -42,7 +42,12 @@ def read_file(input_file):
     return data
 
 
-def main(file12):
+def readMain(file12):
     byteseq = read_file(file12)
     bitseq = bytes_to_bits(byteseq)
     return (bitseq)
+
+
+def writeMain(fileName, bitseq):
+    byteseq = bits_to_bytes(bitseq)
+    write_file(fileName, byteseq)
