@@ -1,0 +1,52 @@
+NB: When defining things, be careful to define all prerequisites, e.g. if defining nonlineaity as the smallest Hamming distance between a component function and an affine Boolean function, you should also briefly explian what a component function is and what is the Hamming distance
+
+CLASSIC CIPHERS
+	(encrypt or decrypt some message, describe how a cipher works)
+	- Caesar cipher
+	- Vigenere cipher
+	- monoalphabetic substitution cipher
+	- Playfair cipher
+
+STREAM CIPHERS
+	(problems on LFSRs - convert between representations, simulate an LFSR, relation between primitive polynomials and LFSRs, describe how an LFSR can be attacked)
+
+BLOCK CIPHERS
+	(describe parts of a Feistel work - single round, how decryption is performed, why is DES not secure anymore, describe the meet-in-the middle attack, how does the meet-in-the-middle affect the security of "repeated ciphers" like 3DES)
+	(AES - describe one round, how decryption works)
+
+MATHS
+	- finite fields (describe how to construct a finite field, how to add and multiply elements to gether; do actual addition, multiplication, exponentiation for a given field with an irreducible polynomial; define a primitive polynomial; check whether a polynomial is primitive; relation between primitive, irreducible and having root)
+	[ primitive => irreducible => has no root ]
+	
+BOOLEAN FUNCTIONS
+	- define (n,m)-function
+	- define cryptographic properties and the attacks that they resist (differential uniformity, nonlinearity
+	- give examples of (n,m)-function used in block ciphers
+
+ASYMMETRIC CRYPTOGRAPHY
+	- explain the difference between symmetric and asymmetric cryptography, give the advantages (applications) and disadvantages, give examples of encryption algorithms for both
+	- RSA (describe how it works, compute basic example, e.g. encrypt, decrypt, find the private from the public key, verify that something is a valid key pair)
+	- efficiency optimizations for RSA: square-and-multiply, short public exponents, Chinese remainder theorem (just mention it)
+	- DHKE (how it works, compute basic example)
+	- Elgamal (how it works, compute basic example, why is Elgamal malleable and what does it mean)
+	- why are elliptic curves useful in cryptography (literally the only thing you have to say about elliptic curves)
+
+DIGITAL SIGNATURES
+	- explain the basic principles
+	- RSA (how it works, compute basic example)
+	- Elgamal (how it works, compute basic example)
+
+HASH FUNCTIONS
+	- what is a hash function?
+	- desirable properties (pre-image resistance, collision resistance, strong collision resistance)
+	- how can you build a block cipher from a hash function? (lasts lide in lecture 10)
+
+MODES OF OPERATION
+	- what is it?
+	- list some popular modes of operation (ECB, CBC, OFB, etc.)
+	- ECB: how it works, what are its problems
+	- GCM: what additional security service does it provide?
+	- maybe just remember one of the non-ECB modes
+
+MODULAR ARITHMETIC
+	- computes something to the power of something modulo something
