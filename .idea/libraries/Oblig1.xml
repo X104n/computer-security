@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Oblig1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Sem4/INF143A/Oblig1/feistel-exhaustive-search.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Sem4/INF143A/Oblig1/Trivium-stream-cipher.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Sem4/INF143A/Oblig1/feistel-network.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
