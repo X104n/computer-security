@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+    <input type="text" id="user_input"/>
+    <input type="button" value="Simplify" onclick="main12()"/>
+</form>
+<div id="program_output"></div>
+</body>
+
+<script>
+    async function* foo(data) {
+        const dataArray = data.split(";")
+        for (let i = 0; i < dataArray.length; i++) {
+            yield dataArray[i];
+        }
+    }
+
+    async function main12() {
+        let bool = true;
+        for await (const num of foo(document.getElementById("user_input").value)) {
+            simplify(num, bool);
+            bool = false;
+            continue;
+        }
+    };
+
+    async function simplify(num, bool) {
+        let input = encodeURIComponent(num);
+        let response = await fetch(`https://newton.vercel.app/api/v2/simplify/${input}`);
+        let response_json = await response.json();
+        let output = response_json.result;
+        if(bool){
+            document.getElementById("program_output").innerHTML = output;
+        }
+    }
+</script>
+</html>
