@@ -4,13 +4,15 @@
 -- Write a query to create the table called Ratings. Pay attention to the
 -- restrictions.
 
-DROP TABLE IF EXISTS `Ratings`;
-CREATE TABLE `Ratings` (
-  `user_id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `rate` int(1) NOT NULL CHECK ( `rate` >= 0 AND `rate` <= 5),
-  `comment` varchar(1000)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `ratings` (
+  `user_id` INT NOT NULL,
+  `product_id` INT NOT NULL,
+  `rate` INT NOT NULL CHECK (rate >= 1 AND rate <= 5),
+  `comment` VARCHAR(255),
+  PRIMARY KEY (user_id, product_id),
+  FOREIGN KEY (user_id) REFERENCES users(user_id),
+  FOREIGN KEY (product_id) REFERENCES products(product_id)
+);
 
 -- b)
 -- Write queries to insert the values from Ratings data.sql
@@ -56,16 +58,15 @@ insert into `Ratings` (user_id,product_id,rate,comment) values
 -- c)
 -- Increase the price of tablets in the Products table by 20%
 
-UPDATE products 
-SET price = price * 1.2 
-WHERE category = 'Tablet';
+update products 
+set price = price * 1.2 
+where category = 'Tablet';
 
 -- d) 
 -- Decreases the number of smartphones in stock by one, and for those that
 -- are out of stock, it does not change.
 
-UPDATE products 
-SET quantity = quantety - 1 
-WHERE category = 'smartphones' 
-AND quantity >= 1;
-
+update products 
+set quantity = quantety - 1 
+where category = 'smartphones' 
+and quantity >= 1;
