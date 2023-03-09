@@ -74,4 +74,37 @@ In machine learning, the ideal algorithm has **low bias** and can accurately mod
 
 Three commonly used methods for finding the sweet spot between simple and complicated models are: **regularization**, **bosting** and **bagging**.
 
+# ROC (Receiver Operator Characteristics)
+
+![ROC graph](ROC.png)
+
+The **ROC** graph summarizes all of the confusion matrices that each treshold produced in a logistic regression alogrythm.
+
+# AUC (Area Under the Curve)
+
+We can calcualte the area under the curve (**AUC**). When doing this we can compare the **ROC** of diffrent ML. algorythms.
+
+The **ROC** with the highest value **AUC** is the optimal MLA. to use
+
+### Side note
+Although **ROC** graphs are drawn using **True Positive Rates** and **False Positive Rates** to summarize confusion matrices, there are other metrics that attempt to do the same thing.
+
+For example, people often replace the **False Positive Rate** with **Precision**.
+
+# Precission
+
+To calculate the precission you use the following formula:
+
+$$
+Precision = {True Positives \over
+True Positives + False Positives}
+$$
+
+**Precision** is the proportion of positive results that were correctly classified
+
+If there are where a considerable more amount in one direction, which create an unbalanced graph, then **Precision** might be more useful than **False Positive Rate**
+
+This is because **Precision** does not inclued the number of **True Negatives** in its calculation, and is not effected by the imbalance.
+
+*(e.g: When studying a rare disease)*
 
