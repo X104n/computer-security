@@ -91,33 +91,6 @@
 
   <!-- PROBLEM 5 -->
 
-
-
-  <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">Problem 5: Insert into Table</h3>
-    <!-- write your solution here -->
-    <div class="w3-content w3-container w3-padding-64" id="about">
-    <h3 class="w3-center">Problem 5: HTML Form</h3>
-    <!-- write your solution here -->
-    <form id="registrationForm" method="post" >
-      <label for="name">Name:</label>
-      <input type="text" id="name5" name="name5" maxlength="50" required><br><br>
-
-      <label for="username">Username:</label>
-      <input type="text" id="username5" name="username5" pattern="[a-zA-Z0-9]{1,50}" title="Only alphanumeric characters, no spaces" required><br><br>
-
-      <label for="email4">Email:</label>
-      <input type="email" id="email4" name="email5" maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Invalid email format" required><br><br>
-
-      <label for="password">Password:</label>
-      <input type="password" id="password5" name="password5" pattern="[a-zA-Z0-9]{1,50}" title="Only alphanumeric characters, no spaces" required><br><br>
-
-      <input type="reset" value="Reset">
-      <input type="submit" name='submit5' value="Submit">
-    </form>
-    <p><?php if (isset($message5)) {echo $message5;}?></p>
-  </div>
-
   <?php 
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['submit5'])) {
@@ -146,24 +119,51 @@
     }
 
       if (mysqli_num_rows($result_email) > 0) {
-        echo "Error: Email already exists.";
+        $message5 = "Error: Email already exists.";
       } elseif (mysqli_num_rows($result_username) > 0) {
-        echo "Error: Username already exists.";
+        $message5 = "Error: Username already exists.";
       } else {
         // Insert the user data into the Users table
         $sql = "INSERT INTO Users (user_id, name, username, email, password, registered_date) VALUES ('$new_user_id', '$name', '$username', '$email', '$hashed_password', '$registered_date')";
-
-        if (mysqli_query($conn, $sql)) {
-          $message5 = "Successful Registration!";
-        } else {
-          $message5 = "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+      }
+      if (isset($conn) && isset($sql) && mysqli_query($conn, $sql)) {
+        $message5 = "Successful Registration!";
+      } elseif (!isset($message5)) {
+        $message5 = "Error: " . $sql . "<br>" . mysqli_error($conn);
       }
     }
   }
 
   ?>
 
+
+
+  <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Problem 5: Insert into Table</h3>
+    <!-- write your solution here -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">Problem 5: HTML Form</h3>
+    <!-- write your solution here -->
+    <form id="registrationForm" method="post" >
+      <label for="name">Name:</label>
+      <input type="text" id="name5" name="name5" maxlength="50" required><br><br>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username5" name="username5" pattern="[a-zA-Z0-9]{1,50}" title="Only alphanumeric characters, no spaces" required><br><br>
+
+      <label for="email4">Email:</label>
+      <input type="email" id="email4" name="email5" maxlength="50" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Invalid email format" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password5" name="password5" pattern="[a-zA-Z0-9]{1,50}" title="Only alphanumeric characters, no spaces" required><br><br>
+
+      <input type="reset" value="Reset">
+      <input type="submit" name='submit5' value="Submit">
+    </form>
+    <p><?php if (isset($message5)) {echo $message5;}?></p>
+  </div>
+
+  
   <!-- PROBLEM 6 -->
 
   <?php
