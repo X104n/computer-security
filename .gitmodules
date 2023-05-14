@@ -1,7 +1,7 @@
 [submodule "INFO284/machine-learning-group-exam"]
 	path = INFO284/machine-learning-group-exam
 	url = https://github.com/X104n/machine-learning-group-exam.git
-[submodule "INF142/Assignments/weather-station"]
+[submodule "INF142/Assignments/Spring-2021/Assignment1/weather-station"]
 	path = INF142/Assignments/weather-station
 	url = https://github.com/X104n/weather-station.git
 [submodule "INF143A/Assignments/Spring-2022/Assignment1/feistel-network"]
