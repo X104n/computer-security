@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Sem5/INF226/inf226-22h" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/INF142/Assignments/weather-station" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/INF143A/Assignments/Spring-2022/Assignment1/Trivium-stream-cipher" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/INF143A/Assignments/Spring-2022/Assignment1/feistel-network" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/INF143A/Assignments/Spring-2022/Assignment1/fesitel-exhaustive-search" vcs="Git" />
   </component>
 </project>

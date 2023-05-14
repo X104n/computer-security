@@ -13,3 +13,6 @@
 [submodule "INF143A/Assignments/Spring-2022/Assignment1/Trivium-stream-cipher"]
 	path = INF143A/Assignments/Spring-2022/Assignment1/Trivium-stream-cipher
 	url = https://github.com/X104n/Trivium-stream-cipher.git
+[submodule "INF226/Assignments/Fall-2022/Assignment2/login-server"]
+	path = INF226/Assignments/Fall-2022/Assignment2/login-server
+	url = https://git.app.uib.no/Stian.Munkejord/login-server.git
