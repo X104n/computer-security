@@ -4,7 +4,7 @@ This repository is for all informatics students at the University of Bergen. It 
 
 ## Contributing
 
-You can contribute to this repository by creating pull requests. If you have exams or assignments that you want to share, please add them to the `exams` or `assignments` folder, respectively. Please make sure that your files are named in the following format: `COURSECODE-EXAM/ASSIGNMENT-SEMESTER-YEAR.pdf`.
+You can contribute to this repository by creating pull requests. If you have exams or assignments that you want to share, please add them to the `exams` or `assignments` folder, respectively. Please make sure that your files are named in the following format: `COURSECODE-EXAM/ASSIGNMENT-SEMESTER-YEAR(Grade).pdf`.
 
 You can also add materials that can help others practice for exams or assignments. Please add them to the `practice` folder.
 
