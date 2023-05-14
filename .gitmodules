@@ -12,10 +12,7 @@
 	url = https://github.com/X104n/Trivium-stream-cipher.git
 [submodule "INF226/Assignments/Fall-2022/Assignment2/login-server"]
 	path = INF226/Assignments/Fall-2022/Assignment2/login-server
-	url = https://git.app.uib.no/Stian.Munkejord/login-server.git
-[submodule "INF142/Assignments/Spring-2021/Assignment1/--force"]
-	path = INF142/Assignments/Spring-2021/Assignment1/--force
-	url = https://github.com/X104n/weather-station.git
+	url = https://git.app.uib.no/Stian.Munkejord/login-server
 [submodule "INF142/Assignments/Spring-2021/Assignment1/weather-station"]
 	path = INF142/Assignments/Spring-2021/Assignment1/weather-station
 	url = https://github.com/X104n/weather-station.git
