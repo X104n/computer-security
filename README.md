@@ -2,8 +2,28 @@
 
 This repository is for all informatics students at the University of Bergen. It contains assignments, exams, and other materials that can help you in your courses.
 
+## Corces in the repository
 
+This corces are from the institut of informatics at the University of Bergen. The corces are from the bachelor program in informatics.
 
+* BINF100 - Introduction to bioinformatics
+* EXPHIL-MNSEM - Examen philosophicum
+* INF100 - Introduction to programming
+* INF101 - Object-oriented programming
+* INF102 - Algorithms and data structures
+* INF112 - Introduction to Systems Development
+* INF113 - Introduction to operating Systems
+* INF115 - Databases and modelling
+* INF140 - Introduction to Cyber Security
+* INF142 - Computer Networks
+* INF143A - Applied Cryptography
+* INF214 - Concurrent programming
+* INF226 - Software Security
+* INFO284 - Machine Learning
+* MAT111 - Calculus 1
+* Mat121 - Linear Algebra
+* MNF130 - Discrete Mathematics
+* STAT110 - Basic Course in Statistics
 
 ## Contributing
 
