@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+      {% for x in weather %}
+            <article class="media content-section">
+            <div class="media-body">
+              <h1>{{x[1]}}</h1>
+              <p class="article-content">Rain precipitation {{ x[5] }} mm</p>
+              <p class="article-content">Temp each hour {{ x[4] }}</p>
+            </div>
+        </article>
+      {% endfor %}
+{% endblock content %}
+{% block information %}
+  <div class="content-section">
+    <h3>Information</h3>
+    <p class='article-content'>This site shows the temp and the rain precipitation for each and every hour
+    </p>
+{% endblock %}

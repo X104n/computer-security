@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block content %}
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="article-content">{{ bergen[0][2]}}th of {{bergen[0][3] }}</small>
+            </div>
+            <h2><a class="article-title" href="/bergen">{{ bergen[0][1] }}</a></h2>
+            <p class="article-content">The temp is: {{ bergen[0][4] }}</p>
+            <p class="article-content">The Rain precipitation is: {{ bergen[0][5] }} mm</p>
+          </div>
+        </article>
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="article-content">{{ oslo[0][2]}}th of {{oslo[0][3] }}</small>
+            </div>
+            <h2><a class="article-title" href="/oslo">{{ oslo[0][1] }}</a></h2>
+            <p class="article-content">The temp is: {{ oslo[0][4] }}</p>
+            <p class="article-content">The Rain precipitation is: {{ oslo[0][5] }} mm</p>
+          </div>
+        </article>
+
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <small class="article-content">{{ karmøy[0][2]}}th of {{karmøy[0][3] }}</small>
+            </div>
+            <h2><a class="article-title" href="/karmøy">{{ karmøy[0][1] }}</a></h2>
+            <p class="article-content">The temp is: {{ karmøy[0][4] }}</p>
+            <p class="article-content">The Rain precipitation is: {{ karmøy[0][5] }} mm</p>
+          </div>
+        </article>
+{% endblock content %}
+{% block information %}
+<div class="content-section">
+  <h3>Information</h3>
+  <p class='article-content'>This is our website
+    
+    Where we use information from three different weather stations, and you can accsess all of the information that the different stations post
+    
+    All the information is posted infront of some amazing art-work of the famous Stian Munkjord
+  </p>
+{% endblock %}

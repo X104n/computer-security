@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in weather %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <!-- <small class="article-content">Day {{ post[2] }}</small> -->
+              <a class="mr-2" href="./day?day={{ post[2] }} loc={{ post[1] }}"target="_blank">{{ post[2] }}th of {{ post[3] }}
+              </a>
+            </div>
+            <h1>{{post[1]}}</h1>
+            <p class="article-content">Rain precipitation {{ post[5] }} mm</p>
+            <p class="article-content">Avg temp of the day {{ post[4] }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+{% block information %}
+  <div class="content-section">
+    <h3>Information</h3>
+    <p class='article-content'>This is the where you can see the average temp, and the average rain fall of that day
+
+
+      #pro-tip#
+      click the date ( ͡° ͜ʖ ͡°)
+    </p>
+{% endblock %}
