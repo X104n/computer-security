@@ -4,3 +4,12 @@
 [submodule "INF142/Assignments/weather-station"]
 	path = INF142/Assignments/weather-station
 	url = https://github.com/X104n/weather-station.git
+[submodule "INF143A/Assignments/Spring-2022/Assignment1/feistel-network"]
+	path = INF143A/Assignments/Spring-2022/Assignment1/feistel-network
+	url = https://github.com/X104n/feistel-network.git
+[submodule "INF143A/Assignments/Spring-2022/Assignment1/fesitel-exhaustive-search"]
+	path = INF143A/Assignments/Spring-2022/Assignment1/fesitel-exhaustive-search
+	url = https://github.com/X104n/fesitel-exhaustive-search.git
+[submodule "INF143A/Assignments/Spring-2022/Assignment1/Trivium-stream-cipher"]
+	path = INF143A/Assignments/Spring-2022/Assignment1/Trivium-stream-cipher
+	url = https://github.com/X104n/Trivium-stream-cipher.git
