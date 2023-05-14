@@ -1,3 +1,6 @@
 [submodule "Sem6/INFO284/machine-learning-group-exam"]
 	path = Sem6/INFO284/machine-learning-group-exam
 	url = https://github.com/X104n/machine-learning-group-exam.git
+[submodule "Sem2/INF142/weather-station"]
+	path = Sem2/INF142/weather-station
+	url = https://github.com/X104n/weather-station.git
