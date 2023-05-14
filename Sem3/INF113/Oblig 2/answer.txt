@@ -1,9 +1,0 @@
-So in this code i have used a semaphore which i have titled "lock" to keep track of the "line" variable. So whenever i use this variable in an if statment or want too update the varable i use a semaphore such that only one thread can access it at a time.
-
-I also use a semaphore to keep the queue in order. And in this instace i have to presume that the semaphore keeps track of the queue. I can see that this isnt something to rely on, but in my instace i belive it is sufficent enough.
-
-For theese two semaphore above i have used them as a lock which is also known as Binary semaphores where the defined initial value is 1.
-
-As of the rest of the semaphores they have been defined with the initial value of 0 to make them wait for the other part to finnis and then "unlock" them.
-
-For the last two semaphores they keep the balance between the patient/car and the doctor. And since the vaccine method is inside of the queue semaphore it can only be run by one car at a time. Thus this solution only would work with one doctor which is what this instance have. 

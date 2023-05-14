@@ -1,0 +1,69 @@
+141 = 74%
+
+ 
+
+1 … 5
+
+ 
+
+2 … 5
+
+ 
+
+3 … 8
+
+    -2 … “melodies”, not “nelodies”
+
+ 
+
+4 … 4
+
+    -1 … “loop prematurely” is a bit ambiguous
+
+ 
+
+5 … 10
+
+ 
+
+6 … 10
+
+ 
+
+7 … 6
+
+    -2 … wrong definition
+
+    -2 … attacks?
+
+ 
+
+8 … 6
+
+    -9 … wrong calculations in multiplication and exponentitation
+
+ 
+
+9 … 1
+
+    Except for the motivation for differential uniformity, all answers are wrong
+
+ 
+
+10 … 2
+
+    -3 … what are “g” and “n”? That is the point of the setup phase
+
+ 
+
+11 … 10
+
+ 
+
+12 … 5
+
+ 
+
+13 … 2
+
+    -8 … only the first question (for 2 points) is answered
