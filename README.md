@@ -12,7 +12,7 @@ If you want to contribute to this repository by adding your exams or assignments
 1. Fork this repository by clicking the "Fork" button at the top of the page.
 2. Clone your forked repository to your local machine using `git clone https://github.com/YOUR-USERNAME/informatics-repository.git`.
 3. Create a new branch for your changes using `git checkout -b my-branch-name`.
-4. Add your exams or assignments to the `exams` or `assignments` folder, respectively. Please make sure that your files are named in the following format: `COURSECODE-EXAM_ASSIGNMENT-SEMESTER-YEAR(Grade)-nr.pdf`. For example, `INF100-EXAM-SPRING-2019(Grade A)-1.pdf`. If you have multiple files for the same course, please add a number at the end of the file name, e.g. `INF100-EXAM-SPRING-2019(Grade A)-2.pdf`.
+4. Add your exams or assignments to the `exams` or `assignments` folder, respectively. Please make sure that your files are named in the following format: `COURSECODE-EXAM-SEMESTER-YEAR(Grade)-nr.pdf`. For example, `INF100-EXAM-SPRING-2019(Grade A)-1.pdf`. If you have multiple files for the same course, please add a number at the end of the file name, e.g. `INF100-EXAM-SPRING-2019(Grade A)-2.pdf`.
 5. Commit your changes using `git commit -m "Add my exams/assignments"`.
 6. Push your changes to your forked repository using `git push origin my-branch-name`.
 7. Go to the original repository and click the "New pull request" button.
